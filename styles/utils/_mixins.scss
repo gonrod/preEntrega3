@@ -1,10 +1,9 @@
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @mixin flex-column {
-    display: flex;
-    flex-direction: column;
-  }
+// _mixins.scss
+
+@mixin transition($properties, $duration: 0.3s, $timing-function: ease-in-out) {
+  transition: $properties $duration $timing-function;
+}
+
+@mixin boxShadow($x, $y, $blur, $color: rgba(0,0,0,0.1)) {
+  box-shadow: $x $y $blur $color;
+}

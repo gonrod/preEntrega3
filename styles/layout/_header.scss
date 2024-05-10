@@ -1,0 +1,27 @@
+// _header.scss
+
+header {
+  border-bottom: 1px solid $darkGray;
+}
+
+#header.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header {
+  .nav-link {
+      @include transition(color, 0.3s);
+      margin-left: 8px;
+      margin-right: 8px;
+
+      &:hover {
+          transform: scale(1.1);
+      }
+  }
+}
+
+#logo img {
+  height: 50px;
+  width: auto;
+}

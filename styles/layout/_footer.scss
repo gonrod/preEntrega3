@@ -1,0 +1,17 @@
+/* Footer styling with some customization for Bootstrap */
+footer {
+    background-color: $color-gray-dark;
+    color: $color-white;
+    padding: $padding;
+    font-size: 0.9em;
+    text-align: center;
+  
+    a {
+      color: $color-white;
+  
+      &:hover {
+        color: $color-blue-light;
+      }
+    }
+  }
+  

@@ -1,19 +1,44 @@
-// Color variables
-$color-black: black;
-$color-white: white;
-$color-gray-dark: #333;
-$color-gray-light: #ddd;
-$color-blue: #007bff;
-$color-blue-light: #4da6ff;
+// _variables.scss
 
-// Spacing variables
-$padding: 20px;
-$margin: 20px;
+// Colors
+$black: #000000;
+$white: #ffffff;
+$blue: #007bff;
+$darkGray: #333;
+$lightGray: #f9f9f9;
+$borderColor: #ddd;
+$linkHoverColor: #4da6ff;
 
-// Font variables
-$font-family: 'Roboto', sans-serif;
+// Font
+$fontFamily: 'Roboto', sans-serif;
+$fontWeightBold: 600;
 
-// Other variables
-$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-$transition: color 0.3s ease-in-out;
-$border-radius: 8px;
+// Font Sizes
+$baseFontSize: 1rem;
+$heading1Size: 2.5rem;
+$heading2Size: 1.25rem;
+$heading3Size: 1.2rem;
+$bodyFontSize: 1rem;
+
+// Spacing
+$baseSpacing: 20px;
+
+$font-size-base: 1rem; // Default font size
+$font-family-base: 'Roboto', sans-serif; // Default font family
+
+$link-color: black; // Original color value for links
+$link-hover-color: #007bff; // Original hover color value for links
+
+$heading-font-size: 2.5rem;
+
+$heading-font-size: 2.5rem; // Original font-size value for h1
+$heading-default-margin: 20px; // Original margin value for h1
+$body-color: #333; // Original color value for body text
+
+$color-gray-dark: #333; // Original value for background color of footer
+$color-white: #fff; // Original value for text color of footer and links
+$color-blue: #007bff; // Original value for blue color
+$color-blue-light: #007bff; // Original value for link hover color
+$padding: 20px; // Original value for padding of footer
+
+$color-gray-light: #dddddd;
