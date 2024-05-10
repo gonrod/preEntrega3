@@ -1,0 +1,372 @@
+// Variables
+$font-family: 'Roboto', sans-serif;
+$color-black: black;
+$color-white: white;
+$color-gray-dark: #333;
+$color-gray-light: #ddd;
+$color-blue: #007bff;
+$color-blue-light: #4da6ff;
+$padding: 20px;
+$margin: 20px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$transition: color 0.3s ease-in-out;
+$border-radius: 8px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Custom font setup
+@font-face {
+  font-family: 'Roboto';
+  src: url('../resources/fonts/Roboto-Regular.ttf');
+}
+
+body {
+  font-family: $font-family;
+  background-color: $color-white;
+}
+
+// Link styling modifications
+a {
+  color: $color-black;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+// Header specific styles
+header {
+  border-bottom: 1px $color-gray-dark solid;
+
+  #header.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-link {
+    @include flex-center;
+    transition: $transition;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+// Adjust logo size and margins
+#logo img {
+  height: 50px;
+  width: auto;
+}
+
+// Main title styling
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: $margin;
+  margin-bottom: $margin;
+  color: $color-gray-dark;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.headline {
+  margin: 1.2rem;
+}
+
+// Main video styling
+#main-video .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.videoWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  top: 0;
+  left: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+// Hero content styling
+.heroContent {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+// Featured list styling
+.featuredList {
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+// Footer styling
+footer {
+  background-color: $color-gray-dark;
+  color: $color-white;
+  padding: $padding;
+  font-size: 0.9em;
+  text-align: center;
+
+  a {
+    color: $color-white;
+
+    &:hover {
+      color: $color-blue-light;
+    }
+  }
+}
+
+// Products page styling
+.productsSection {
+  padding: $padding;
+
+  .col-md-4 {
+    margin-bottom: 30px;
+  }
+
+  .equal-height-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .productItem {
+    background: $color-white;
+    border: 1px solid $color-gray-light;
+    margin-bottom: 20px;
+    padding: $padding;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: auto;
+    }
+
+    h2 {
+      margin-top: auto;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// About me section styling
+.aboutSection {
+  margin: $margin;
+  background: $color-white;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  .brokerImage {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+    margin-bottom: $margin;
+  }
+
+  .storyContent {
+    h1 {
+      color: $color-blue;
+      margin-bottom: $margin;
+    }
+
+    h3 {
+      color: $color-gray-dark;
+      margin-top: $margin;
+      margin-bottom: 10px;
+
+      &:nth-child(n+1) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: $color-blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Contact section styling
+.contactSection {
+  @include flex-center;
+  align-items: flex-start;
+  padding: $padding;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .contactText,
+  .contactForm {
+    flex: 1;
+    padding: $padding;
+  }
+
+  .contactText {
+    background-color: #f9f9f9;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin: $margin;
+    line-height: 1.6;
+    color: $color-gray-dark;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+
+  .contactForm {
+    max-width: 600px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: $margin;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: $color-blue;
+      color: $color-white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($color-blue, 10%);
+      }
+    }
+  }
+}
+
+// FAQ page styling
+.faqSection {
+  margin-top: $margin;
+  text-align: center;
+
+  .faqList {
+    list-style: none;
+    padding: 0;
+  }
+
+  .faqCard {
+    background: $color-white;
+    border: 1px solid $color-gray-light;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: $padding;
+    margin-bottom: $margin;
+    text-align: left;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    hr {
+      margin: 10px 0;
+      border: 0;
+      border-top: 1px solid $color-gray-light;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  #header > div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #header #searchBar {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  footer .nav-link {
+    width: 100%;
+  }
+
+  .featuredList ul li {
+    flex-basis: calc(50% - 20px);
+  }
+}

@@ -1,0 +1,91 @@
+#main-video .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    overflow: hidden; 
+    height: 50vh;
+    top: 0;
+    left: 0;
+  }
+  
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .heroContent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .heroContent p {
+    font-size: 1.2rem;
+  }
+  
+  /* Adjustments for images in featured list to ensure they are responsive */
+  .featuredList img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .featuredList h2 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+  }
+  
+  .featuredList p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  /* Products Page */
+  .productsSection {
+    padding: 20px;
+  }
+  
+  .productsSection .col-md-4 {
+    margin-bottom: 30px; /* Adjust the margin-bottom as needed */
+  }
+  
+  .equal-height-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .productItem {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* Add margin between .productItem elements */
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex; /* Make .productItem a flex container */
+    flex-direction: column; /* Arrange child elements vertically */
+    justify-content: space-between; /* Align child elements vertically */
+    height: 100%; /* Ensure .productItem takes up full height */
+  }
+  
+  .productItem img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: auto; /* Align image to the middle */
+  }
+  
+  .productItem h2 {
+    margin-top: auto; /* Align h2 to the bottom */
+  }
+  
+  .productItem p {
+    margin-top: 0; /* Remove default margin to avoid extra space */
+    margin-bottom: 0; /* Remove default margin to avoid extra space */
+  }
+  

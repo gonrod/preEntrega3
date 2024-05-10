@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../resources/fonts/Roboto-Regular.ttf');
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fallback to sans-serif if Roboto is not available */
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

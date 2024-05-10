@@ -1,0 +1,165 @@
+/* Base Styles */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fallback to sans-serif if Roboto is not available */
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+    color: #333;
+  }
+  
+  p {
+    margin: 0 0 1.5em;
+  }
+  
+  ul, ol {
+    margin: 0 0 1.5em 1.5em;
+    padding: 0;
+  }
+  
+  a {
+    color: black; /* Default link color */
+    font-weight: 600;
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
+    line-height: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  
+    &:hover {
+      color: #007bff; /* Bootstrap primary color for hover state */
+    }
+  }
+  
+  /* Header specific styles */
+  header {
+    border-bottom: 1px #333 solid;
+  }
+  
+  #header.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  } 
+  
+  .header .nav-link {
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+    margin-left: 8px; /* Spacing between menu items */
+    margin-right: 8px;
+  }
+  
+  /* Adjust logo size and margins */
+  #logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Main title styling */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+  }
+  
+  /* Global Utility Classes */
+  .headline {
+    margin: 1.2rem;
+  }
+  
+  #main-video .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+    top: 0;
+    left: 0;
+  
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  
+  .heroContent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .heroContent p {
+    font-size: 1.2rem;
+  }
+  
+  /* Adjustments for images in featured list to ensure they are responsive */
+  .featuredList img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .featuredList h2 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+  }
+  
+  .featuredList p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  /* Footer styling with some customization for Bootstrap */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 0.9em;
+    text-align: center;
+  
+    a {
+      color: #fff;
+  
+      &:hover {
+        color: #4da6ff;
+      }
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    #header > div {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    #header #searchBar {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    footer .nav-link {
+      width: 100%;
+    }
+  
+    .featuredList ul li {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  

@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom font setup */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../resources/fonts/Roboto-Regular.ttf');
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fallback to sans-serif if Roboto is not available */
+    background-color: white;
+}
+
+/* Link styling modifications */
+a {
+    color: black; /* Default link color */
+    font-weight: 600;
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
+    line-height: 2rem;
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+a:hover {
+    color: #007bff; /* Bootstrap primary color for hover state */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Header specific styles */
+header {
+    border-bottom: 1px #333 solid;
+}
+
+#header.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+} 
+
+.header .nav-link {
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+    margin-left: 8px; /* Spacing between menu items */
+    margin-right: 8px;
+    transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
+}
+
+.header .nav-link:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Adjust logo size and margins */
+#logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Main title styling */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+}
+
+.headline {
+    margin: 1.2rem;
+}
+
+#main-video .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.videoWrapper {
+    position: relative;
+    overflow: hidden; 
+    height: 50vh;
+    top: 0;
+    left: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.heroContent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.heroContent p {
+    font-size: 1.2rem;
+}
+
+/* Adjustments for images in featured list to ensure they are responsive */
+.featuredList img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.featuredList img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.featuredList h2 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.featuredList p {
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+/* Footer styling with some customization for Bootstrap */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+footer a:hover {
+    color: #4da6ff;
+}
+
+/* Products Page */
+
+.productsSection {
+    padding: 20px;
+}
+
+.productsSection .col-md-4 {
+    margin-bottom: 30px; /* Adjust the margin-bottom as needed */
+}
+
+.equal-height-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productItem {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* Add margin between .productItem elements */
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex; /* Make .productItem a flex container */
+    flex-direction: column; /* Arrange child elements vertically */
+    justify-content: space-between; /* Align child elements vertically */
+    height: 100%; /* Ensure .productItem takes up full height */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
+}
+
+.productItem:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Darker shadow on hover */
+}
+
+.productItem img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: auto; /* Align image to the middle */
+}
+
+.productItem h2 {
+    margin-top: auto; /* Align h2 to the bottom */
+}
+
+.productItem p {
+    margin-top: 0; /* Remove default margin to avoid extra space */
+    margin-bottom: 0; /* Remove default margin to avoid extra space */
+}
+
+/*About Me*/
+.aboutSection {
+    margin: 20px; 
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
+}
+
+.aboutSection:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Darker shadow on hover */
+}
+
+.brokerImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.storyContent h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.storyContent h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.storyContent h3:nth-child(n+1) {
+    margin-bottom: 1rem;
+}
+
+.storyContent p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.storyContent a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth transition for color and text-decoration */
+}
+
+.storyContent a:hover {
+    text-decoration: underline;
+}
+
+/* Contact */
+.contactSection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.contactSection h1 {
+    margin-bottom: 40px;
+}
+
+.contactText,
+.contactForm {
+    flex: 1;
+    padding: 20px;
+}
+
+.contactText {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.contactText h2 {
+    margin-bottom: 16px;
+}
+
+.contactForm {
+    max-width: 600px;
+}
+
+.contactForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for border-color */
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.contactForm button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+}
+
+.contactForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* FAQ Page */
+.faqSection {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.faqList {
+    list-style: none;
+    padding: 0;
+}
+
+.faqCard {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
+}
+
+.faqCard:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Slightly darker shadow on hover */
+}
+
+.faqCard h3 {
+    margin-bottom: 10px;
+}
+
+.faqCard hr {
+    margin: 10px 0; /* Adjust margin as needed */
+    border: 0; /* Remove default border */
+    border-top: 1px solid #ddd; /* Add a border at the top */
+}
+
+.faqCard p {
+    margin-bottom: 0; /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+    #header > div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #header #searchBar {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    footer .nav-link {
+        width: 100%;
+    }
+
+    .featuredList ul li {
+        flex-basis: calc(50% - 20px);
+    }
+}

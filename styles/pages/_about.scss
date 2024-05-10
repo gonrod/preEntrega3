@@ -1,0 +1,45 @@
+.aboutSection {
+    margin: 20px; 
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden; 
+  }
+  
+  .brokerImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .storyContent h1 {
+    color: $color-blue;
+    margin-bottom: 20px;
+  }
+  
+  .storyContent h3 {
+    color: $color-gray-dark;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .storyContent h3:nth-child(n+1) {
+    margin-bottom: 1rem;
+  }
+  
+  .storyContent p {
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  
+  .storyContent a {
+    color: $color-blue;
+    text-decoration: none;
+  }
+  
+  .storyContent a:hover {
+    text-decoration: underline;
+  }
+  

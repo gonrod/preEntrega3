@@ -1,0 +1,40 @@
+.productsSection {
+    padding: 20px;
+  }
+  
+  .productsSection .col-md-4 {
+    margin-bottom: 30px; /* Adjust the margin-bottom as needed */
+  }
+  
+  .equal-height-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .productItem {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* Add margin between .productItem elements */
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex; /* Make .productItem a flex container */
+    flex-direction: column; /* Arrange child elements vertically */
+    justify-content: space-between; /* Align child elements vertically */
+    height: 100%; /* Ensure .productItem takes up full height */
+  }
+  
+  .productItem img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: auto; /* Align image to the middle */
+  }
+  
+  .productItem h2 {
+    margin-top: auto; /* Align h2 to the bottom */
+  }
+  
+  .productItem p {
+    margin-top: 0; /* Remove default margin to avoid extra space */
+    margin-bottom: 0; /* Remove default margin to avoid extra space */
+  }
+  

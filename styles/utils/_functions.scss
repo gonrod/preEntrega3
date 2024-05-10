@@ -1,0 +1,38 @@
+// Utility functions
+
+// Darken a color by a specified amount
+@function darken($color, $amount) {
+    @return mix(black, $color, $amount);
+  }
+  
+  // Lighten a color by a specified amount
+  @function lighten($color, $amount) {
+    @return mix(white, $color, $amount);
+  }
+  
+  // Convert pixels to rems for responsive typography
+  @function px-to-rem($px, $base: 16px) {
+    @return $px / $base * 1rem;
+  }
+  
+  // Get the complementary color
+  @function complement($color) {
+    @return adjust-hue($color, 180);
+  }
+  
+  // Calculate spacing based on a scale
+  @function spacing($factor) {
+    $base-spacing-unit: 1rem;
+    @return $factor * $base-spacing-unit;
+  }
+  
+  // Responsive font-size using clamp
+  @function responsive-font($min-size, $max-size) {
+    $min-vw: 320px;
+    $max-vw: 1200px;
+    $min: px-to-rem($min-size);
+    $max: px-to-rem($max-size);
+  
+    @return clamp(#{$min}, calc(#{$min} + (#{$max} - #{$min}) * ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))), #{$max});
+  }
+  
